@@ -1,7 +1,7 @@
 # include "binary_trees.h"
 # include <stdlib.h>
 /**
-* binary_tree_height - left-->right-->root
+* binary_tree_height -	max depth, or height of a BT
 * @tree: root of the binary tree
 * Return: height of a tree
 */
