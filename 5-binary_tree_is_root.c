@@ -1,7 +1,7 @@
 # include "binary_trees.h"
 # include <stdlib.h>
 /**
-* binary_tree_is_leaf - create a binary tree node
+* binary_tree_is_root - check if root
 * @node: parent node
 * Return: 1 if node is leaf, or 0 if not
 */
