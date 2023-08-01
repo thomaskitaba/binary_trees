@@ -14,8 +14,6 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 		return (0);
 	}
 
-	size = 1 + binary_tree_size(tree->left);
-	size = size + binary_tree_size(tree->right);
-
+    /* depth  must be equal,   parent must be the same */
 	return (size);
 }
