@@ -1,7 +1,7 @@
 # include "binary_trees.h"
 # include <stdlib.h>
 /**
-* binary_tree_size - number of nodes
+* binary_tree_leaves - number of leaves
 * @tree: root of the binary tree
 * Return: height of a tree
 */
