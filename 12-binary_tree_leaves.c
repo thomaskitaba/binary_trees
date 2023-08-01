@@ -1,5 +1,4 @@
-# include "binary_trees.h"
-# include <stdlib.h>
+#include "binary_trees.h"
 /**
 * binary_tree_leaves - number of leaves
 * @tree: root of the binary tree
