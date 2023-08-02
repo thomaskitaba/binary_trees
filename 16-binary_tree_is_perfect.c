@@ -10,7 +10,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t left_full, right_full;
 
-    left_full = right_full = 0;
+	left_full = right_full = 0;
 
 	if (tree == NULL)
 	{
@@ -21,14 +21,14 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		/* the recursive call will be place here*/
 		left_full = 1 + binary_tree_is_perfect(tree->left);
 		right_full = 1 + binary_tree_is_perfect(tree->right);
-        if (right_full == left_full)
-        {
-            if (right_full != 0 || left_full != 0)
-            {
-                return (right_full);
-            }
-        }
-    }
+		if (right_full == left_full)
+		{
+			if (right_full != 0 || left_full != 0)
+			{
+				return (right_full);
+			}
+		}
+	}
 
 	else if (tree->left == NULL && tree->right == NULL)
 	{
@@ -38,5 +38,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	{
 		return (0);
 	}
-    return (0);
+	return (0);
 }
