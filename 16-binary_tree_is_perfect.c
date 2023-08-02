@@ -1,9 +1,9 @@
 # include "binary_trees.h"
 # include <stdlib.h>
 /**
-* binary_tree_is_full - number of nodes
+* binary_tree_is_perfect - check if Binary tree is perfect or not
 * @tree: root of the binary tree
-* Return: 0 on failure , if full BT
+* Return: 1 if perfect, 0 if not perfect
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
