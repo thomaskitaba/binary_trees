@@ -1,21 +1,38 @@
 # include "binary_trees.h"
 # include <stdlib.h>
 /**
-* binary_tree_size - number of nodes
-* @tree: root of the binary tree
-* Return: height of a tree
+* binary_tree_sibling - number of nodes
+* @node: node of a binary tree
+* Return: sibling node
 */
-size_t binary_tree_leaves(const binary_tree_t *tree)
+binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-	size_t size;
-
-	if (tree == NULL)
+	if (node == NULL || node->parent == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
-
-	size = 1 + binary_tree_size(tree->left);
-	size = size + binary_tree_size(tree->right);
-
-	return (size);
+	if (node->parent->left == node)
+	{
+		if (node->parent->right)
+			return (node->parent->right);
+		else
+			return (NULL);
+	}
+	if (node->parent->left)
+		return (node->parent->left);
+	else
+		return (NULL);
+}
+/**
+* binary_tree_uncle - get uncle of a node
+* @node: root of the binary tree
+* Return: pointer to the uncle
+*/
+binary_tree_t *binary_tree_uncle(binary_tree_t *node)
+{
+	if (!node)
+	{
+		return (NULL);
+	}
+	return (binary_tree_sibling(node->parent));
 }
