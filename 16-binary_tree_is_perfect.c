@@ -50,15 +50,15 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    size_t left, right, leaf, depth;
+	size_t left, right, leaf, depth;
 
-    depth = binary_tree_depth(tree);
+	depth = binary_tree_depth(tree);
 	left = right = leaf = 0;
 	if (tree == NULL)
 	{
 		return (0);
 	}
-    leaf++;
+	leaf++;
 	left = binary_tree_leaves(tree->left);
 	right = binary_tree_leaves(tree->right);
 
