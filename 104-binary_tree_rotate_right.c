@@ -1,6 +1,6 @@
 # include "binary_trees.h"
 /**
-* binary_tree_rotate_left - invert tree to left
+* binary_tree_rotate_right - invert tree to right
 * @tree: root of the tree
 * Return: pointer to the root of the inverted root
 */
