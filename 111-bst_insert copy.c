@@ -1,4 +1,4 @@
-#include "binary_trees.h"
+# include "binary_trees.h"
 /**
 * binary_tree_node - create a binary tree node
 * @parent: parent node
@@ -24,28 +24,44 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	return (new_node);
 }
 /**
- * bst_insert - Insert a value into a Binary Search Tree (BST).
- * @tree: Pointer to the root node of the BST.
- * @value: Value to be inserted into the BST.
- *
- * Return: Pointer to the root node of the BST after insertion.
- */
+* check_if_bst - invert tree to right
+* @tree: root of the tree
+* Return: 1 if tree is valid BST, 0 otherwise
+*/
 bst_t *bst_insert(bst_t **tree, int value)
 {
-	bst_t *current, *parent;
+	int is_tree;
 
-	current = tree;
-	parent = NULL;
-	while (current != NULL)
+	is_tree = 0;
+	if (tree == NULL)
 	{
-		parent = current;
-		if (current->n == value)
-			return (NULL);
-		else if (current->n < value)
-			current = current->right;
-		else
-			current = current->left;
-
+		return (0);
 	}
-	return (NULL);
+	else
+	{
+		tree->left ? binary_tree_is_bst(tree->left) : 0;
+		 tree->right ? binary_tree_is_bst(tree->right) : 0;
+
+		if (tree->left != NULL)
+		{
+			if (tree->n > tree->left->n)
+			{
+				is_tree++;
+				return (is_tree);
+			}
+			else
+				return (is_tree);
+		}
+		if (tree->right != NULL)
+		{
+			if (tree->n < tree->right->n)
+			{
+				is_tree++;
+				return (is_tree);
+			}
+			else
+				return (is_tree);
+		}
+	}
+	return (is_tree);
 }
