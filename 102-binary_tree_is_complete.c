@@ -1,7 +1,7 @@
 # include "binary_trees.h"
 # include <stdlib.h>
 /**
-* binary_tree_is_full - number of nodes
+* binary_tree_is_complete - number of nodes
 * @tree: root of the binary tree
 * Return: 0 on failure , if full BT
 */
