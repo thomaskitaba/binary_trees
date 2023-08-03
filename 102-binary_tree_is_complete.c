@@ -1,5 +1,6 @@
 # include "binary_trees.h"
 # include <stdlib.h>
+
 /**
 * binary_tree_is_complete - number of nodes
 * @tree: root of the binary tree
@@ -16,8 +17,8 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	if (tree->left != NULL && tree->right != NULL)
 	{
 		/* the recursive call will be place here*/
-		left_full = binary_tree_is_full(tree->left);
-		right_full = binary_tree_is_full(tree->right);
+		left_full = binary_tree_is_complete(tree->left);
+		right_full = binary_tree_is_complete(tree->right);
 		if (left_full == 1 && right_full == 1)
 		{
 			return (1);
