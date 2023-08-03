@@ -1,10 +1,10 @@
 # include "binary_trees.h"
 /**
-* binary_tree_is_complete - invert tree to right
+* binary_tree_rotate_right - invert tree to right
 * @tree: root of the tree
 * Return: pointer to the root of the inverted root
 */
-int binary_tree_is_complete(const binary_tree_t *tree)
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
 {
 	binary_tree_t *temp;
     /* check if we have left node*/
