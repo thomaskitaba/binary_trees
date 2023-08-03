@@ -5,7 +5,7 @@
 * @tree: root of the binary tree
 * Return: 0 on failure , if full BT
 */
-int binary_tree_is_full(const binary_tree_t *tree)
+int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	size_t left_full, right_full;
 
